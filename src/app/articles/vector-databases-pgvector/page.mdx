@@ -1,0 +1,66 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+  author: 'Jenoff Van Hulle',
+  date: '2025-11-18',
+  title: 'Vector Databases: The Memory Systems of the AI Era',
+  description:
+    'As AI applications evolve, so does the way we store data. Explore why vector databases are essential for modern AI and how tools like Pinecone, Weaviate, and pgvector are powering the next generation of apps.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+For decades, the database world was split into two main camps: Relational (SQL) for structured data and NoSQL for unstructured or semi-structured data. If you wanted to find a user by email, you used SQL. If you wanted to store a massive JSON blob, you might use MongoDB.
+
+But the AI revolution has introduced a new data type that neither of these traditional systems handles well natively: **Vectors**.
+
+## Why Do We Need Vector Databases?
+
+As we explored in my [article on Vector Embeddings](/articles/vector-embeddings-seo-geo), AI models represent data—text, images, audio—as long lists of numbers called vectors.
+
+A traditional database is designed for **exact matching**. You ask for a record where `id = 123` or `category = 'books'`.
+A vector database is designed for **similarity search**. You ask: *"Find me the 10 items in the database that are mathematically closest to this query vector."*
+
+This shift from "exact match" to "semantic similarity" is what enables computers to understand context, intent, and meaning, rather than just keywords. Without vector databases, AI models would be amnesiacs—powerful processors with no long-term memory to draw upon.
+
+## Key Use Cases
+
+The utility of vector databases extends far beyond just "search." They are the foundational infrastructure for a wide range of AI capabilities:
+
+### 1. Semantic Search
+This is the most common use case. Instead of relying on brittle keyword matching, users can search by concept. A search for "cozy place to read" can return results for "quiet coffee shops" or "public libraries," even if the words don't overlap.
+
+### 2. Retrieval-Augmented Generation (RAG)
+LLMs like GPT-4 have a limited context window and a knowledge cutoff. Vector databases allow you to store vast amounts of private or up-to-date data. When a user asks a question, the system retrieves the most relevant chunks of information from the vector DB and feeds them to the LLM, grounding its answer in reality.
+
+### 3. Recommendation Engines
+Vectors are perfect for capturing user preferences. If a user likes a specific movie, a vector database can instantly find other movies with similar plot vectors, visual styles, or thematic elements, powering highly personalized feeds like those seen on Netflix or TikTok.
+
+### 4. Anomaly Detection
+In cybersecurity or fraud detection, "normal" behavior clusters together in vector space. Anything that falls far outside this cluster is mathematically anomalous. Vector DBs can identify these outliers in milliseconds, flagging potential threats before they cause damage.
+
+### 5. Multimodal Search
+Because vectors can represent any data type, you can build systems that cross modalities. You can search a library of images using text descriptions, or find a song by humming a melody that is converted into a similar audio vector.
+
+## The Landscape: Specialized vs. Integrated
+
+As the need for vector storage has exploded, two main approaches have emerged.
+
+### Specialized Vector Databases
+Tools like **Pinecone**, **Weaviate**, **Milvus**, and **Qdrant** were built from the ground up specifically for vectors.
+*   **Pros**: They often offer advanced features like hybrid search algorithms, high scalability, and specialized indexing (HNSW) out of the box.
+*   **Cons**: They add a new component to your infrastructure stack, leading to potential data fragmentation (your user data is in Postgres, but your vectors are in Pinecone).
+
+### Integrated Solutions (e.g., pgvector)
+Recognizing the demand, traditional databases have added vector support. The most notable example is **pgvector**, an extension for PostgreSQL.
+*   **Pros**: It allows you to keep your vectors right next to your relational data. You can perform joins, maintain ACID compliance, and use the operational knowledge you already have.
+*   **Cons**: While rapidly improving, it may not yet match the raw performance or feature set of a specialized DB at massive (billion-scale) datasets.
+
+## Conclusion
+
+Whether you choose a specialized tool like Pinecone or an integrated solution like pgvector depends on your specific scale and needs. What is certain, however, is that vector databases are no longer a niche technology. They are the memory systems of the AI era, essential for building applications that don't just process data, but truly understand it.

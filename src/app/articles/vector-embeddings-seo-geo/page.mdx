@@ -1,0 +1,87 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+  author: 'Jenoff Van Hulle',
+  date: '2025-11-12',
+  title: 'Vector Embeddings: The Hidden Engine of Modern SEO and GEO',
+  description:
+    'Explore how vector embeddings are reshaping search, moving us from keyword matching to semantic understanding, and why this matters for the future of Generative Engine Optimization.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+In the early days of the internet, search was simple. If you wanted to find a recipe for "apple pie," you typed "apple pie" into a search engine. The engine would then scour its index for pages where the words "apple" and "pie" appeared frequently. It was a game of keyword matching—a literal, rigid interpretation of user intent.
+
+Today, that approach is archaic. Search engines have evolved into sophisticated semantic understanding machines, capable of grasping the *meaning* behind a query, not just the words. At the heart of this revolution lies a mathematical concept that is also powering the AI explosion: **Vector Embeddings**.
+
+As we transition from traditional Search Engine Optimization (SEO) to the new frontier of Generative Engine Optimization (GEO), understanding vector embeddings is no longer optional for digital marketers and developers—it's fundamental.
+
+## What Are Vector Embeddings?
+
+At its core, a vector embedding is a way to translate complex data—like text, images, or audio—into a list of numbers (a vector) in a high-dimensional space.
+
+Imagine a 2D graph where you plot animals based on two features: size and domesticity. "Cat" and "Dog" would be close together. "Lion" and "Wolf" would be close to each other but far from the pets. Now, expand that concept to hundreds or thousands of dimensions, capturing nuances like "sentiment," "context," "formality," and "subject matter."
+
+In this high-dimensional space, concepts with similar meanings are located close to each other mathematically.
+*   **"King" - "Man" + "Woman" ≈ "Queen"**
+*   **"Apple" (the fruit)** is far from **"Apple" (the tech company)** if the surrounding context differs.
+
+This allows computers to "understand" that a search for "best places to eat in Rome" is semantically related to "top Roman restaurants," even if they share zero keywords.
+
+## The Shift from Keywords to Semantic Search
+
+Traditional SEO was obsessed with keywords. We stuffed them into title tags, headers, and meta descriptions. We tracked "keyword density."
+
+Vector embeddings changed the game by enabling **Semantic Search**.
+
+When Google introduced algorithms like BERT (Bidirectional Encoder Representations from Transformers) and later MUM (Multitask Unified Model), they started using embeddings to understand the *intent* behind a search.
+
+### Why This Matters for SEO
+
+1.  **Topical Authority Over Keyword Stuffing**: You can no longer game the system by repeating a phrase. Search engines now look for comprehensive coverage of a topic. They analyze the vector space of your content to see if it covers the related concepts that a high-quality article should contain.
+2.  **Long-Tail Queries**: Embeddings excel at handling long, conversational queries (e.g., "what do I do if my iphone screen is black but on"). The engine maps this complex query to a vector and finds documents with similar vector representations, which might be titled "Troubleshooting iPhone Black Screen of Death."
+3.  **Multimodal Search**: Embeddings aren't limited to text. You can embed images and video into the same vector space. This is why you can search Google with a photo of a shoe and find where to buy it.
+
+## Enter GEO: Generative Engine Optimization
+
+We are now standing on the precipice of another major shift. Search engines are becoming "Answer Engines." Tools like ChatGPT, Perplexity, and Google's AI Overviews (SGE) don't just give you a list of links; they generate a direct answer.
+
+Optimizing for these AI-driven systems is called **Generative Engine Optimization (GEO)**.
+
+### How Embeddings Power GEO
+
+AI models use Retrieval-Augmented Generation (RAG) to answer queries. As discussed in my [previous article](/articles/understanding-rags), RAG relies heavily on vector search to find relevant information.
+
+When an AI engine tries to answer a user's question, it:
+1.  Converts the user's prompt into a **query vector**.
+2.  Searches its database for content chunks with the closest **document vectors**.
+3.  Feeds those chunks into the LLM to generate an answer.
+
+**If your content's vector doesn't align with the query's vector, the AI won't see it.** It won't cite you. It won't link to you. You become invisible.
+
+## Strategies for the Vector Era
+
+So, how do you optimize for a mathematical vector space?
+
+### 1. Focus on Context and Nuance
+Write for humans, not robots. Since embeddings capture semantic meaning, "natural" writing that uses varied vocabulary and covers a topic deeply will perform better than rigid, keyword-focused text.
+
+### 2. Structure Your Data
+Help the embedding models understand your content. Use clear headings, bullet points, and schema markup. When a bot "chunks" your content for its vector database, clean structure ensures that each chunk is a coherent, self-contained unit of meaning.
+
+### 3. Answer Questions Directly
+AI models love direct answers. If you are targeting the query "how to tie a tie," ensure you have a concise, step-by-step section that semantically matches that intent perfectly. This increases the "similarity score" between the user's question and your content vector.
+
+### 4. Build a Knowledge Graph
+Link your content internally in a way that reinforces relationships. If you have a cluster of articles about "Coffee," linking them together creates a dense "neighborhood" in the vector space, signaling to the AI that you are an authority on this entire semantic cluster.
+
+## Conclusion
+
+Vector embeddings are the silent infrastructure of the modern web. They have transformed search from a lexical matching game into a semantic understanding engine. As we move into the era of Generative Engine Optimization, the winners will not be those who find the best keywords, but those who create content that mathematically aligns with the true intent of their users.
+
+The future of SEO is not about being found by a crawler; it's about being *understood* by a model.
