@@ -125,7 +125,8 @@ function MobileNavigation(
             <MobileNavItem href="/articles">Articles</MobileNavItem>
             <MobileNavItem href="/projects">Projects</MobileNavItem>
             <MobileNavItem href="/experience">Experience</MobileNavItem>
-            <MobileNavItem href="/uses">Uses</MobileNavItem>
+            <MobileNavItem href="/tool-stack">Tool Stack</MobileNavItem>
+            <MobileNavItem href="/contact">Contact</MobileNavItem>
           </ul>
         </nav>
       </PopoverPanel>
@@ -147,7 +148,7 @@ function NavItem({
       <Link
         href={href}
         className={clsx(
-          'relative block px-3 py-2 transition',
+          'relative block px-3 py-2 transition whitespace-nowrap',
           isActive
             ? 'text-teal-500 dark:text-teal-400'
             : 'hover:text-teal-500 dark:hover:text-teal-400',
@@ -170,7 +171,8 @@ function DesktopNavigation(props: React.ComponentPropsWithoutRef<'nav'>) {
         <NavItem href="/articles">Articles</NavItem>
         <NavItem href="/projects">Projects</NavItem>
         <NavItem href="/experience">Experience</NavItem>
-        <NavItem href="/uses">Uses</NavItem>
+        <NavItem href="/tool-stack">Tool Stack</NavItem>
+        <NavItem href="/contact">Contact</NavItem>
       </ul>
     </nav>
   )

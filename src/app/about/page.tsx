@@ -80,13 +80,13 @@ export default function About() {
               I help organizations organize their digital marketing smarter. With over ten years of experience in digital performance, I’ve learned that the biggest challenges aren't just about marketing—they're about data, engineering, and automation.
             </p>
             <p>
-              I don't just define strategies; I build the infrastructure to execute them. My background isn't limited to ad platforms and analytics dashboards. I bring a <strong>technical marketeer's</strong> mindset to the table. Whether it's building a <strong>Semantic Content Generator</strong> or architecting intelligent automation pipelines, I use code to solve complex marketing problems.
+              I don't just define strategies; I build the infrastructure to execute them. My background isn't limited to ad platforms and analytics dashboards. I bring a technical marketeer's mindset to the table. Whether it's building a Semantic Content Generator or architecting intelligent automation pipelines, I use code to solve complex marketing problems.
             </p>
             <p>
-              My toolkit spans both worlds. On the marketing side, I'm a veteran in <strong>SEO, SEA, Social, and GA4/GTM</strong> implementations. On the technical side, I leverage modern engineering tools to build custom solutions. I am currently deeply focused on exploring how <strong>Vector Databases</strong> and <strong>AI Agents</strong> can create hyper-personalized, scalable experiences.
+              My toolkit spans both worlds. On the marketing side, I'm a veteran in SEO, SEA, Social, and GA4/GTM implementations. On the technical side, I leverage modern engineering tools to build custom solutions. I am currently deeply focused on exploring how Vector Databases and AI Agents can create hyper-personalized, scalable experiences.
             </p>
             <p>
-              Throughout my professional career, I've learned that technology is useless without direction. I work where strategy meets execution—designing actionable performance roadmaps while simultaneously coaching teams on how to implement them. My goal is to bridge the gap between high-level ambition and technical reality.
+              I combine strategic planning with hands-on technical execution. My focus is on building scalable performance roadmaps and guiding teams to implement them effectively, ensuring that technology directly supports business goals.
             </p>
             <h2 className="text-2xl font-bold tracking-tight text-zinc-800 sm:text-3xl dark:text-zinc-100">
               How I work
@@ -107,12 +107,13 @@ export default function About() {
             <SocialLink href="https://www.linkedin.com/in/jenoffvanhulle/" target="_blank" icon={LinkedInIcon} className="mt-4">
               Follow on LinkedIn
             </SocialLink>
+
             <SocialLink
-              href="mailto:hello@jenoffvanhulle.com"
+              href="/contact"
               icon={MailIcon}
               className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
             >
-              hello@jenoffvanhulle.com
+              Contact me
             </SocialLink>
           </ul>
         </div>

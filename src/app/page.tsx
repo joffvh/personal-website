@@ -11,11 +11,12 @@ import {
   XIcon,
 } from '@/components/SocialIcons'
 import { HomeProjects } from '@/components/HomeProjects'
-import { Newsletter } from '@/components/Newsletter'
 import { Photos } from '@/components/Photos'
 import { SocialLink } from '@/components/SocialLink'
 import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
+
+import { DownloadCV } from '@/components/DownloadCV'
 
 function Article({ article }: { article: ArticleWithSlug }) {
   return (
@@ -46,19 +47,8 @@ export default async function Home() {
             I’m Jenoff, a technical marketer and engineer. I help organizations organize their digital marketing smarter by combining strategic thinking with hands-on execution in AI and automation.
           </p>
           <div className="mt-6 flex gap-6">
-            <SocialLink href="#" aria-label="Follow on X" icon={XIcon} />
             <SocialLink
-              href="#"
-              aria-label="Follow on Instagram"
-              icon={InstagramIcon}
-            />
-            <SocialLink
-              href="#"
-              aria-label="Follow on GitHub"
-              icon={GitHubIcon}
-            />
-            <SocialLink
-              href="#"
+              href="https://www.linkedin.com/in/jenoffvanhulle/"
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
             />
@@ -74,8 +64,8 @@ export default async function Home() {
             ))}
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <Newsletter />
             <HomeProjects />
+            <DownloadCV />
           </div>
         </div>
       </Container>

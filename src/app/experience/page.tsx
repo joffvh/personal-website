@@ -2,78 +2,58 @@ import { type Metadata } from 'next'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-
-interface Experience {
-    company: string
-    role: string
-    description: string
-    date: string
-    endDate?: string
-}
-
-const experiences: Experience[] = [
-    {
-        company: 'BossData',
-        role: 'Managing Director',
-        description: 'Leading the agency in delivering high-end data and performance strategies. Responsible for operational management, business development, and strategic direction to help organizations organize their digital marketing smarter.',
-        date: '2025-01',
-    },
-    {
-        company: 'ZIGT',
-        role: 'Performance Director',
-        description: 'Headed the performance marketing department. Developed integrated performance strategies across SEO, SEA, and Social. Coached and expanded the digital team, ensuring the alignment of channels, data, and technology.',
-        date: '2022-04',
-        endDate: '2024-12',
-    },
-    {
-        company: 'zzoom',
-        role: 'Freelance',
-        description: 'Provided interim digital marketing management and consultancy. Specialized in SEO audits, SEA restructuring, and digital strategy implementation for diverse clients. Focused on bringing structure and clarity to complex digital challenges.',
-        date: '2016-08',
-        endDate: '2022-03',
-    },
-    {
-        company: 'groupm (part of WPP)',
-        role: 'SEO Consultant / Head of SEO / Head of Search',
-        description: 'Built and led the SEO department. Defined SEO strategies for major clients, integrated SEO with other media channels, and trained internal teams. Worked where strategy and execution meet to deliver measurable impact.',
-        date: '2011-04',
-        endDate: '2016-07',
-    },
-    {
-        company: 'Huis van de Mens',
-        role: 'Member of Staff',
-        description: 'Supported organizational goals and community outreach programs, contributing to the mission of the organization.',
-        date: '2004-06',
-        endDate: '2011-03',
-    },
-]
+import { cvData, type Experience } from '@/lib/cv-data'
 
 function ExperienceItem({ experience }: { experience: Experience }) {
-    const startYear = new Date(experience.date).getFullYear()
-    const endYear = experience.endDate ? new Date(experience.endDate).getFullYear() : 'Present'
-
     return (
-        <article className="md:grid md:grid-cols-4 md:items-baseline">
-            <Card className="md:col-span-3">
-                <Card.Title>{experience.role}</Card.Title>
-                <Card.Eyebrow decorate>{experience.company}</Card.Eyebrow>
-                <Card.Description>{experience.description}</Card.Description>
-            </Card>
-            <Card.Eyebrow
-                as="time"
-                dateTime={experience.date}
-                className="mt-1 max-md:hidden"
-            >
-                {startYear} - {endYear}
-            </Card.Eyebrow>
+        <article className="relative flex flex-col items-start pl-8 md:pl-0">
+            <h3 className="text-lg font-semibold tracking-tight text-zinc-800 dark:text-zinc-100 md:col-span-3">
+                {experience.company}
+            </h3>
+            <div className="mt-4 space-y-8">
+                {experience.roles.map((role, index) => {
+                    const startYear = new Date(role.date).getFullYear()
+                    const endYear = role.endDate
+                        ? new Date(role.endDate).getFullYear()
+                        : 'Present'
+
+                    return (
+                        <div key={index} className="relative pl-4 md:grid md:grid-cols-4 md:gap-x-6 md:pl-0">
+                            {/* Timeline line for mobile */}
+                            <div className="absolute bottom-0 left-0 top-0 w-px bg-zinc-200 md:hidden dark:bg-zinc-700/40" />
+
+                            <div className="md:col-span-3 group relative">
+                                {/* Dot for mobile */}
+                                <div className="absolute -left-[21px] top-1.5 h-2.5 w-2.5 rounded-full border border-zinc-200 bg-zinc-50 md:hidden dark:border-zinc-700 dark:bg-zinc-800" />
+
+                                <h4 className="text-base font-semibold text-zinc-800 dark:text-zinc-100">
+                                    {role.title}
+                                </h4>
+                                <ul className="mt-2 list-disc pl-4 space-y-1 text-sm text-zinc-600 dark:text-zinc-400">
+                                    {role.description.map((item, i) => (
+                                        <li key={i}>{item}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                            <div className="mt-2 md:mt-0 md:text-right">
+                                <time
+                                    dateTime={role.date}
+                                    className="text-sm text-zinc-400 dark:text-zinc-500"
+                                >
+                                    {startYear} - {endYear}
+                                </time>
+                            </div>
+                        </div>
+                    )
+                })}
+            </div>
         </article>
     )
 }
 
 export const metadata: Metadata = {
     title: 'Experience',
-    description:
-        'My professional journey, roles, and career highlights.',
+    description: 'My professional journey, roles, and career highlights.',
 }
 
 export default function Experience() {
@@ -84,7 +64,7 @@ export default function Experience() {
         >
             <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
                 <div className="flex max-w-3xl flex-col space-y-16">
-                    {experiences.map((experience, index) => (
+                    {cvData.experiences.map((experience, index) => (
                         <ExperienceItem key={index} experience={experience} />
                     ))}
                 </div>
