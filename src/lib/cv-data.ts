@@ -53,7 +53,7 @@ export const cvData = {
     ],
     experiences: [
         {
-            company: 'BossData',
+            company: 'BossData (part of ZIGT)',
             roles: [
                 {
                     title: 'Managing Director',
@@ -73,7 +73,7 @@ export const cvData = {
                 {
                     title: 'Performance Director',
                     description: [
-                        'Expanding the digital performance service line across ZIGT’s client portfolio (SEO, SEA, social, analytics).',
+                        'Expanding the digital performance service line (SEO, SEA, social, analytics).',
                         'Developing the agency’s performance marketing strategy and operating model.',
                         'Strategically supported the BossData acquisition and integration.',
                         'Implementing advanced analytics and leading cross-channel growth initiatives.',
@@ -114,7 +114,7 @@ export const cvData = {
                 {
                     title: 'Head of SEO',
                     description: [
-                        'Managed SEO specialists; designed enterprise strategies; scaled SEO cross-market, local, national, global.',
+                        'Managed SEO specialists and designed global enterprise strategies.',
                     ],
                     date: '2013-07',
                     endDate: '2014-02',
@@ -122,7 +122,7 @@ export const cvData = {
                 {
                     title: 'Search Engine Marketing Consultant',
                     description: [
-                        'Executed technical SEO/analytics; delivered audits; ran on/off-site optimization; trained stakeholders.',
+                        'Executed technical SEO, audits, optimization, and stakeholder training.',
                     ],
                     date: '2011-04',
                     endDate: '2013-06',

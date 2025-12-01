@@ -5,7 +5,7 @@ import { CVDocument } from '@/components/CVDocument'
 import { Button } from '@/components/Button'
 import { useEffect, useState } from 'react'
 
-export function DownloadCV() {
+export function DownloadCV({ className }: { className?: string }) {
     const [isClient, setIsClient] = useState(false)
 
     useEffect(() => {
@@ -14,7 +14,7 @@ export function DownloadCV() {
 
     if (!isClient) {
         return (
-            <Button variant="secondary" className="group mt-6 w-full">
+            <Button variant="secondary" className={className}>
                 Download CV
                 <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
             </Button>
@@ -24,11 +24,11 @@ export function DownloadCV() {
     return (
         <PDFDownloadLink
             document={<CVDocument />}
-            fileName="Jenoff_Van_Hulle_CV.pdf"
-            className="w-full"
+            fileName="CV-Jenoff-Van-Hulle.pdf"
+            className={className}
         >
             {({ blob, url, loading, error }) => (
-                <Button variant="secondary" className="group mt-6 w-full">
+                <Button variant="secondary" className="group w-full">
                     {loading ? 'Generating PDF...' : 'Download CV'}
                     <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
                 </Button>

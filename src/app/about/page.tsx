@@ -11,6 +11,7 @@ import {
   XIcon,
 } from '@/components/SocialIcons'
 import portraitImage from '@/images/portrait.jpg'
+import { DownloadCV } from '@/components/DownloadCV'
 
 function SocialLink({
   className,
@@ -116,6 +117,9 @@ export default function About() {
               Contact me
             </SocialLink>
           </ul>
+          <div className="mt-10 border-t border-zinc-100 pt-8 dark:border-zinc-700/40">
+            <DownloadCV />
+          </div>
         </div>
       </div>
     </Container>

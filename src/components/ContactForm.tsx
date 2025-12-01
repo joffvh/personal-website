@@ -143,16 +143,21 @@ export function ContactForm() {
                     Subject <span className="font-normal text-zinc-500">(Optional)</span>
                 </label>
                 <div className="mt-2">
-                    <select
+                    <input
+                        type="text"
                         id="subject"
                         {...register('subject')}
-                        className="block w-full rounded-md border-0 px-4 py-2.5 text-zinc-900 shadow-sm ring-1 ring-inset ring-zinc-300 focus:ring-2 focus:ring-inset focus:ring-teal-600 sm:text-sm sm:leading-6 dark:bg-zinc-800/50 dark:text-zinc-100 dark:ring-zinc-700 dark:focus:ring-teal-500"
-                    >
-                        <option value="">Select a topic...</option>
-                        <option value="project">Project Inquiry</option>
-                        <option value="speaking">Speaking Opportunity</option>
-                        <option value="other">Other</option>
-                    </select>
+                        className={clsx(
+                            'block w-full rounded-md border-0 px-4 py-2.5 text-zinc-900 shadow-sm ring-1 ring-inset ring-zinc-300 placeholder:text-zinc-400 focus:ring-2 focus:ring-inset focus:ring-teal-600 sm:text-sm sm:leading-6 dark:bg-zinc-800/50 dark:text-zinc-100 dark:ring-zinc-700 dark:focus:ring-teal-500',
+                            errors.subject && 'ring-red-500 focus:ring-red-500 dark:ring-red-500/50'
+                        )}
+                        placeholder="What is this about?"
+                    />
+                    {errors.subject && (
+                        <p className="mt-2 text-sm text-red-600 dark:text-red-400">
+                            {errors.subject.message}
+                        </p>
+                    )}
                 </div>
             </div>
 
