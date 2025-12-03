@@ -74,7 +74,6 @@ function MoonIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
         strokeLinecap="round"
         strokeLinejoin="round"
         aria-hidden="true"
-        {...props}
       />
     </svg>
   )
