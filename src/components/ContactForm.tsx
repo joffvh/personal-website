@@ -66,12 +66,14 @@ export function ContactForm() {
                 <p className="mt-2 text-zinc-600 dark:text-zinc-400">
                     Thanks for reaching out. I&apos;ll get back to you as soon as possible.
                 </p>
-                <button
-                    onClick={() => setIsSuccess(false)}
-                    className="mt-6 text-sm font-medium text-teal-500 hover:text-teal-600 dark:text-teal-400 dark:hover:text-teal-300"
+                <a
+                    href="https://www.linkedin.com/in/jenoffvanhulle/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-6 inline-block text-sm font-medium text-teal-500 hover:text-teal-600 dark:text-teal-400 dark:hover:text-teal-300"
                 >
-                    Send another message
-                </button>
+                    Connect on LinkedIn
+                </a>
             </div>
         )
     }

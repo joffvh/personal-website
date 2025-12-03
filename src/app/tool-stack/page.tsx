@@ -2,10 +2,6 @@ import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import {
   SiPython,
-  SiFlask,
-  SiReact,
-  SiNextdotjs,
-  SiTypescript,
   SiWordpress,
   SiTailwindcss,
   SiRadixui,
@@ -97,18 +93,6 @@ export default function Uses() {
           <Tool title="Python" icon={SiPython}>
             My go-to language for backend development, data analysis, and scripting. Simple, powerful, and versatile.
           </Tool>
-          <Tool title="Flask" icon={SiFlask}>
-            A lightweight WSGI web application framework. Perfect for building quick APIs and microservices.
-          </Tool>
-          <Tool title="React" icon={SiReact}>
-            The library for web and native user interfaces. It changed the way I think about building UI.
-          </Tool>
-          <Tool title="Next.js" icon={SiNextdotjs}>
-            The React framework for the web. It handles everything from routing to server-side rendering, making production builds a breeze.
-          </Tool>
-          <Tool title="TypeScript" icon={SiTypescript}>
-            JavaScript with syntax for types. It catches errors early and makes the codebase much more maintainable.
-          </Tool>
           <Tool title="WordPress" icon={SiWordpress}>
             Still the king of CMS. I use it for content-heavy sites where flexibility and ease of use for the client are paramount.
           </Tool>
@@ -151,9 +135,6 @@ export default function Uses() {
           <Tool title="Google Gemini API" icon={SiGoogle}>
             Google's latest multimodal AI models. Great for processing text, images, and video.
           </Tool>
-          <Tool title="Google Antigravity" icon={SiGoogle}>
-            An advanced agentic coding assistant that helps me write code, debug, and refactor faster than ever.
-          </Tool>
         </ToolsSection>
 
         <ToolsSection title="Infrastructure & Hosting">
@@ -171,6 +152,9 @@ export default function Uses() {
           </Tool>
           <Tool title="VSCode" icon={MdCode}>
             The classic editor. Lightweight, extensible, and familiar.
+          </Tool>
+          <Tool title="Google Antigravity" icon={SiGoogle}>
+            An advanced agentic coding assistant that helps me write code, debug, and refactor faster than ever.
           </Tool>
         </ToolsSection>
 

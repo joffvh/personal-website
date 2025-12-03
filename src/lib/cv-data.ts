@@ -20,7 +20,7 @@ export const cvData = {
         email: 'hello@jenoffvanhulle.com',
         phone: '+32 478 22 04 85',
         linkedin: 'linkedin.com/in/jenoffvanhulle',
-        website: 'www.jenoffvanhulle.com',
+        website: 'jenoffvanhulle.com',
         image: portraitImage,
     },
     skills: [
@@ -40,7 +40,7 @@ export const cvData = {
         { name: 'English', level: 'C1' },
     ],
     toolStack: [
-        'Python', 'Flask', 'React', 'Next.js', 'TypeScript', 'WordPress', 'Agencii', 'GitHub',
+        'Python', 'WordPress', 'Agencii', 'GitHub',
         'Tailwind CSS', 'Shadcn ui',
         'PostgreSQL', 'pgvector', 'Supabase', 'Clerk',
         'OpenAI API', 'Google Gemini API', 'Google Antigravity',
