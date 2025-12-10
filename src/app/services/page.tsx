@@ -156,7 +156,7 @@ export default function Services() {
                     </p>
                     <div className="mt-8">
                         <Button href="/contact">
-                            Book a Discovery Call
+                            Contact me
                         </Button>
                     </div>
                 </section>

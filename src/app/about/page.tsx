@@ -10,6 +10,7 @@ import {
   LinkedInIcon,
   XIcon,
 } from '@/components/SocialIcons'
+import { ContactWidget } from '@/components/ContactWidget'
 import portraitImage from '@/images/portrait.jpg'
 import { DownloadCV } from '@/components/DownloadCV'
 
@@ -108,14 +109,9 @@ export default function About() {
             <SocialLink href="https://www.linkedin.com/in/jenoffvanhulle/" target="_blank" icon={LinkedInIcon} className="mt-4">
               Follow on LinkedIn
             </SocialLink>
-
-            <SocialLink
-              href="/contact"
-              icon={MailIcon}
-              className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
-            >
-              Contact me
-            </SocialLink>
+            <div className='mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40'>
+              <ContactWidget />
+            </div>
           </ul>
           <div className="mt-10 border-t border-zinc-100 pt-8 dark:border-zinc-700/40">
             <DownloadCV />
