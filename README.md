@@ -1,42 +1,47 @@
-# Spotlight
+# Jenoff Van Hulle - Personal Website
 
-Spotlight is a [Tailwind Plus](https://tailwindcss.com/plus) site template built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
+Welcome to the repository for [jenoffvanhulle.com](https://www.jenoffvanhulle.com). This is my personal corner of the internet where I share my work, thoughts, and experience bridging the gap between Digital Marketing and AI Engineering.
 
-## Getting started
+## Tech Stack
 
-To get started with this template, first install the npm dependencies:
+This website is built with a modern stack focusing on performance and developer experience:
 
-```bash
-npm install
-```
+-   **Framework**: [Next.js](https://nextjs.org) (App Router)
+-   **Styling**: [Tailwind CSS](https://tailwindcss.com)
+-   **Language**: [TypeScript](https://www.typescriptlang.org)
+-   **Content**: [MDX](https://mdxjs.com) for articles
+-   **Deployment**: [Vercel](https://vercel.com) (or similar)
 
-Next, create a `.env.local` file in the root of your project and set the `NEXT_PUBLIC_SITE_URL` variable to your site's public URL:
+## Features
 
-```
-NEXT_PUBLIC_SITE_URL=https://example.com
-```
+-   **Portfolio**: Showcase of my projects and experience.
+-   **Blog**: Articles on AI, Marketing Automation, and Engineering.
+-   **Responsive Design**: Fully responsive UI built with Tailwind CSS.
+-   **Dark Mode**: Native support for light and dark themes.
 
-Next, run the development server:
+## Getting Started
 
-```bash
-npm run dev
-```
+To run this project locally:
 
-Finally, open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
+1.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
 
-## Customizing
+2.  **Set up environment variables**:
+    Create a `.env.local` file in the root directory:
+    ```bash
+    NEXT_PUBLIC_SITE_URL=http://localhost:3000
+    ```
 
-You can start editing this template by modifying the files in the `/src` folder. The site will auto-update as you edit these files.
+3.  **Run the development server**:
+    ```bash
+    npm run dev
+    ```
+
+4.  **Open the site**:
+    Navigate to [http://localhost:3000](http://localhost:3000).
 
 ## License
 
-This site template is a commercial product and is licensed under the [Tailwind Plus license](https://tailwindcss.com/plus/license).
-
-## Learn more
-
-To learn more about the technologies used in this site template, see the following resources:
-
-- [Tailwind CSS](https://tailwindcss.com/docs) - the official Tailwind CSS documentation
-- [Next.js](https://nextjs.org/docs) - the official Next.js documentation
-- [Headless UI](https://headlessui.dev) - the official Headless UI documentation
-- [MDX](https://mdxjs.com) - the MDX documentation
+This project is based on the Spotlight template by Tailwind Labs.

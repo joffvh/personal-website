@@ -54,6 +54,11 @@ export default async function Home() {
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
             />
+            <SocialLink
+              href="https://github.com/joffvh"
+              aria-label="Follow on GitHub"
+              icon={GitHubIcon}
+            />
           </div>
         </div>
       </Container>

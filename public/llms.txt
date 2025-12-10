@@ -1,0 +1,17 @@
+# Jenoff Van Hulle - Technical Marketer & AI Engineer
+
+## About
+Jenoff Van Hulle bridges the gap between Digital Marketing and AI Engineering. 
+Services include Strategic Leadership, AI & Automation Engineering, and Performance Execution.
+
+## Website Structure
+- /: Home - Overview of services, projects, and recent articles.
+- /about: Professional background, philosophy, and contact info.
+- /services: Detailed breakdown of engagement models and technical capabilities (AI Agents, n8n, Next.js, etc.).
+- /projects: Portfolio of technical projects.
+- /articles: Insights on AI, Marketing, and Engineering.
+- /tool-stack: Current tools and technologies used.
+
+## Contact
+- LinkedIn: https://www.linkedin.com/in/jenoffvanhulle/
+- Contact Page: https://www.jenoffvanhulle.com/contact
